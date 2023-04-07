@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model table36100402 {
+  id                                                    Int     @id @default(autoincrement())
+  REF_DATE                                              Int?
+  GEO                                                   String? @db.Text
+  DGUID                                                 String? @db.Text
+  currencyValue                                         String? @db.Text
+  North_American_Industry_Classification_System__NAICS_ String? @map("North American Industry Classification System (NAICS)") @db.Text
+  UOM                                                   String? @db.Text
+  UOM_ID                                                Int?
+  SCALAR_FACTOR                                         String? @db.Text
+  SCALAR_ID                                             Int?
+  VECTOR                                                String? @db.Text
+  COORDINATE                                            String? @db.Text
+  VALUE                                                 Float?
+  DECIMALS                                              Int?
+}
